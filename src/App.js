@@ -3,6 +3,7 @@ import React from "react";
 import { Link, Route, Routes } from "react-router-dom";
 import Home from "./Home";
 import GamePlay from "./GamePlay";
+import StandardGame from "./standard/standardGame";
 
 function App() {
   return (
@@ -12,8 +13,8 @@ function App() {
           <Link to="/" class="list">
             Home
           </Link>
-          <Link to="/course" class="list">
-            Courses
+          <Link to="/GamePlay" class="list">
+            GamePlay
           </Link>
           <Link to="/live" class="list">
             Live course
@@ -28,8 +29,8 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/GamePlay" element={<GamePlay />} />
-        {/* <Route path="/" element={<Courses />} />
-        <Route path="/" element={<Live />} />
+          <Route path="/standard/standardGame" element={<StandardGame/>} />
+        {/* <Route path="/" element={<Live />} />
         <Route path="/" element={<Contact />} /> */}
       </Routes>
     </div>

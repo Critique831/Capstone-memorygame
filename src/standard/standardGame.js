@@ -12,6 +12,7 @@ const cardImages = [
 ]
 
 function StandardGame() {
+    console.log('Rendering StandardGame component');
     const [cards, setCards] = useState([]);
     const [turns, setTurns] = useState(0);
     const [card1, setCard1] = useState(null);
