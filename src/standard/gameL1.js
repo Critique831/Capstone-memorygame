@@ -1,5 +1,5 @@
 import {useState,useEffect} from 'react';
-import './standardGame.css';
+import './gameL1.css';
 import SingleCard from '../components/SingleCard';
 
 const cardImages = [
@@ -7,12 +7,9 @@ const cardImages = [
     {"src": "img/google.png", matched: false},
     {"src": "img/html.png", matched: false},
     {"src": "img/javascript-1.svg", matched: false},
-    {"src": "img/react.png", matched: false},
-    {"src": "img/win11.png", matched: false}
 ]
 
-function StandardGame() {
-    console.log('Rendering StandardGame component');
+function StandardGameL1() {
     const [cards, setCards] = useState([]);
     const [turns, setTurns] = useState(0);
     const [card1, setCard1] = useState(null);
@@ -76,6 +73,7 @@ function StandardGame() {
         setCard2(null)
         setCards(shuffledCards)
         setTurns(0)
+        setFinished(false)
     }
 
     const handleChoice = (card) => {
@@ -99,7 +97,7 @@ function StandardGame() {
             <p>
                 <button onClick={shuffle}>New Game</button>
             </p>
-            <div className='card-grid'>
+            <div className='card-gridL1'>
                 {cards.map(card => (
                     <SingleCard key={card.id} card={card} handleChoice={handleChoice} flipped={card===card1||card===card2||card.matched} disabled={disabled}/>
                 ))}
@@ -109,4 +107,4 @@ function StandardGame() {
     )
 }
 
-export default StandardGame;
+export default StandardGameL1;
