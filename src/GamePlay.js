@@ -7,8 +7,9 @@ function GamePlay() {
     <div className="HEADING">
         <h1>Please choose your Game Mode</h1>
         <div className="game-menu">
-            <button><Link to="/Standard" >Standard Mode</Link></button>
-            <button><Link to="/Challenge" >Challenge Mode</Link></button>
+            <Link to="/StandardGame" ><button>Standard Mode</button></Link>
+            <Link to="/GameL1" ><button>Standard Mode 1</button></Link>
+            <Link to="/Challenge" ><button>Challenge Mode</button></Link>
         </div>
     </div> 
   )
