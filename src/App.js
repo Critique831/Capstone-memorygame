@@ -1,20 +1,11 @@
 import logo from './logo.svg';
+import StandardGame from './standard/standardGame';
 import './App.css';
 
 function App() {
   return (
     <div className="App">
-      <h1>Memory Game</h1>
-      <p>
-        <button>New Game</button>
-      </p>
-      <p>
-        <button>Game Mode</button>
-      </p>
-      <p>
-        <button>Leaderboard</button>
-      </p>
-      
+      <StandardGame/>
     </div>
   );
 }
