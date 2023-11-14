@@ -1,6 +1,7 @@
 import React from 'react'
 import "./App.css"
 import { Link, Route, Routes } from "react-router-dom";
+import StandardGame from "./standard/standardGame";
 
 function GamePlay() {
   return (
@@ -11,6 +12,13 @@ function GamePlay() {
             <Link to="/GameL1" ><button>Standard Mode 1</button></Link>
             <Link to="/Challenge" ><button>Challenge Mode</button></Link>
         </div>
+
+      <Routes>
+        <Route path="/standardGame" element={<StandardGame />} />
+        {/* <Route path="/" element={<Live />} />
+        <Route path="/" element={<Contact />} /> */}
+      </Routes>
+
     </div> 
   )
 }

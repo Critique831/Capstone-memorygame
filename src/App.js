@@ -6,6 +6,7 @@ import GamePlay from "./GamePlay";
 import StandardGame from "./standard/standardGame";
 import StandardGameL1 from "./standard/gameL1";
 
+
 function App() {
   return (
     <div className="container">
@@ -14,8 +15,8 @@ function App() {
           <Link to="/" class="list">
             Home
           </Link>
-          <Link to="/course" class="list">
-            Courses
+          <Link to="/GamePlay" class="list">
+            GamePlay
           </Link>
           <Link to="/live" class="list">
             Live course
