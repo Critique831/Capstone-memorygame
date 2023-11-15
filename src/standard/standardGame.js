@@ -6,7 +6,7 @@ const cardImages = [
     {"src": "img/css.png", matched: false},
     {"src": "img/google.png", matched: false},
     {"src": "img/html.png", matched: false},
-    {"src": "img/javascript-1.svg", matched: false},
+    {"src": "img/js.png", matched: false},
     {"src": "img/react.png", matched: false},
     {"src": "img/win11.png", matched: false}
 ]
