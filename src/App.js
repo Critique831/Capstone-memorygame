@@ -15,6 +15,14 @@ import Level from "./lvlsel";
 
 function App() {
   return (
+    <div className="App">
+      <h1>Memory Game</h1>
+      <div className="selection-menu">
+        <Link to="/GamePlay" ><button className='menu'>New Game</button></Link>
+        <Link to="/lvlsel" ><button className='menu'>Level</button></Link>
+        <button className='menu'><Link to="/Leaderboard" >Leaderboard</Link></button>
+    </div>
+  
     <div className="background_container">
       <nav>
         <ul>
@@ -33,14 +41,8 @@ function App() {
 
         </ul>
       </nav>
-    <div className="App">
-      <h1>Memory Game</h1>
-      <div className="selection-menu">
-        <Link to="/GamePlay" ><button className='menu'>New Game</button></Link>
-        <Link to="/lvlsel" ><button className='menu'>Level</button></Link>
-        <button className='menu'><Link to="/Leaderboard" >Leaderboard</Link></button>
       </div>
-    </div>
+
 
       {/* Defining routes path and rendering components as element */}
       <Routes>
