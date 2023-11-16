@@ -105,9 +105,8 @@ function StandardGame() {
             const level = 2; // You can change this to the appropriate level value
             updateLeaderboard(level, turns);
         }
-      }, [finished, turns]);
+    }, [finished, turns]);
 
-    
     useEffect(() => {
         if (finished) {
           // Show the level completion popup
@@ -119,20 +118,20 @@ function StandardGame() {
         // Logic to proceed to the next level
         // Update the level, reset game state, etc.
         setShowPopup(false); // Hide the popup
-      };
-    
-      const handleRestart = () => {
+    };
+
+    const handleRestart = () => {
         // Logic to restart the current level...
         shuffle(); // Reshuffle cards for the current level
         setTurns(0); // Reset turns to zero
         setFinished(false); // Reset finished state
         setShowPopup(false); // Hide the popup
-      }
-    
-      const handleHome = () => {
+    }
+
+    const handleHome = () => {
         navigate('/');
         setShowPopup(false); // Hide the popup
-      };
+    };
 
       
 
