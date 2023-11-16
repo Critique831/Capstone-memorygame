@@ -2,6 +2,8 @@ import {useState,useEffect} from 'react';
 import './standardGame.css';
 import SingleCard from '../components/SingleCard';
 import { updateLeaderboard } from '../leaderboardUtils';
+import LevelCompletePopup from '../Intermediate';
+import '../Intermediate.css';
 
 const cardImages = [
     {"src": "img/css.png", matched: false},
@@ -13,6 +15,7 @@ const cardImages = [
 ]
 
 function StandardGame() {
+    const [showPopup, setShowPopup] = useState(false);
     console.log('Rendering StandardGame component');
     const [cards, setCards] = useState([]);
     const [turns, setTurns] = useState(0);
@@ -102,6 +105,31 @@ function StandardGame() {
         }
       }, [finished, turns]);
 
+    
+    useEffect(() => {
+        if (finished) {
+          // Show the level completion popup
+          setShowPopup(true);
+        }
+    }, [finished]);
+
+    const handleProceed = () => {
+        // Logic to proceed to the next level
+        // Update the level, reset game state, etc.
+        setShowPopup(false); // Hide the popup
+      };
+    
+      const handleRestart = () => {
+        StandardGame();
+        setShowPopup(false); // Hide the popup
+      };
+    
+      const handleHome = () => {
+        setShowPopup(false); // Hide the popup
+      };
+
+      
+
     return(
         <div className='App'>
             <h1>Memory Game</h1>
@@ -114,6 +142,14 @@ function StandardGame() {
                 ))}
             </div>
             <p>Turns: {turns}</p>
+
+            {showPopup && (
+                <LevelCompletePopup
+                onProceed={handleProceed}
+                onRestart={handleRestart}
+                onHome={handleHome}
+                />
+            )}
         </div>
     )
 }
