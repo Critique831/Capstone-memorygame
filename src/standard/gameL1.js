@@ -1,6 +1,7 @@
 import {useState,useEffect} from 'react';
 import './gameL1.css';
 import SingleCard from '../components/SingleCard';
+import { updateLeaderboard } from '../leaderboardUtils';
 
 const cardImages = [
     {"src": "img/css.png", matched: false},
@@ -90,6 +91,14 @@ function StandardGameL1() {
         setTurns(prev => prev + 1)
         setDisabled(false)
     }
+
+    //Storing good marks to leaderboard
+    useEffect(() => {
+        if (finished) {
+          const level=1;
+          updateLeaderboard(level, turns);
+        }
+      }, [finished, turns]);
 
     return(
         <div className='App'>

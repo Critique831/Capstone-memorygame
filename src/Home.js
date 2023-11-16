@@ -1,6 +1,6 @@
 import React from 'react'
 import "./App.css"
-import { Link, Route, Routes } from "react-router-dom";
+import { Link} from "react-router-dom";
 
 function Home() {
   return (
@@ -11,7 +11,7 @@ function Home() {
 
         <button>Level</button>
 
-        <button>Leaderboard</button>
+        <button><Link to="/Leaderboard" >Leaderboard</Link></button>
       </div>
     </div>
   );

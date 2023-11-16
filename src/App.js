@@ -5,6 +5,7 @@ import Home from "./Home";
 import GamePlay from "./GamePlay";
 import StandardGame from "./standard/standardGame";
 import StandardGameL1 from "./standard/gameL1";
+import Leaderboard from "./Leaderboard";
 
 
 function App() {
@@ -18,8 +19,8 @@ function App() {
           <Link to="/GamePlay" class="list">
             GamePlay
           </Link>
-          <Link to="/live" class="list">
-            Live course
+          <Link to="/Leaderboard" class="list">
+            Leaderboard
           </Link>
           <Link to="/contact" class="list">
             Contact
@@ -33,6 +34,7 @@ function App() {
         <Route path="/GamePlay" element={<GamePlay />} />
         <Route path="/StandardGame" element={<StandardGame/>} />
         <Route path="/GameL1" element={<StandardGameL1/>} />
+        <Route path="/Leaderboard" element={<Leaderboard/>} />
         {/* <Route path="/" element={<Courses />} />
         <Route path="/" element={<Live />} />
         <Route path="/" element={<Contact />} /> */}
