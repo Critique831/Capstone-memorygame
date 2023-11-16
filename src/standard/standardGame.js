@@ -4,6 +4,7 @@ import SingleCard from '../components/SingleCard';
 import { updateLeaderboard } from '../leaderboardUtils';
 import LevelCompletePopup from '../Intermediate';
 import '../Intermediate.css';
+import {useNavigate } from "react-router-dom";
 
 const cardImages = [
     {"src": "img/css.png", matched: false},
@@ -17,6 +18,7 @@ const cardImages = [
 function StandardGame() {
     const [showPopup, setShowPopup] = useState(false);
     console.log('Rendering StandardGame component');
+    const navigate = useNavigate();
     const [cards, setCards] = useState([]);
     const [turns, setTurns] = useState(0);
     const [card1, setCard1] = useState(null);
@@ -120,11 +122,15 @@ function StandardGame() {
       };
     
       const handleRestart = () => {
-        StandardGame();
+        // Logic to restart the current level...
+        shuffle(); // Reshuffle cards for the current level
+        setTurns(0); // Reset turns to zero
+        setFinished(false); // Reset finished state
         setShowPopup(false); // Hide the popup
-      };
+      }
     
       const handleHome = () => {
+        navigate('/');
         setShowPopup(false); // Hide the popup
       };
 

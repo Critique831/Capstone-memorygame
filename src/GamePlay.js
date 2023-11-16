@@ -13,11 +13,6 @@ function GamePlay() {
             <Link to="/Challenge" ><button>Challenge Mode</button></Link>
         </div>
 
-      <Routes>
-        <Route path="/standardGame" element={<StandardGame />} />
-        {/* <Route path="/" element={<Live />} />
-        <Route path="/" element={<Contact />} /> */}
-      </Routes>
 
     </div> 
   )
