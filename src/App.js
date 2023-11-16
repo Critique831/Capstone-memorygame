@@ -33,7 +33,7 @@ function App() {
 
         </ul>
       </nav>
-      <div className="App">
+    <div className="App">
       <h1>Memory Game</h1>
       <div className="selection-menu">
         <Link to="/GamePlay" ><button className='menu'>New Game</button></Link>
@@ -41,6 +41,7 @@ function App() {
         <button className='menu'><Link to="/Leaderboard" >Leaderboard</Link></button>
       </div>
     </div>
+
       {/* Defining routes path and rendering components as element */}
       <Routes>
         <Route path="/" element={<Home />} />
