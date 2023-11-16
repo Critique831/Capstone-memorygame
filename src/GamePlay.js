@@ -10,6 +10,10 @@ function GamePlay() {
         <div className="game-menu">
             <Link to="/StandardGame" ><button>Standard Mode</button></Link>
             <Link to="/GameL1" ><button>Standard Mode 1</button></Link>
+            <Link to="/GameL2" ><button>Standard Mode 2</button></Link>
+            <Link to="/GameL3" ><button>Standard Mode 3</button></Link>
+            <Link to="/GameL4" ><button>Standard Mode 4</button></Link>
+            <Link to="/GameL5" ><button>Standard Mode 5</button></Link>
             <Link to="/Challenge" ><button>Challenge Mode</button></Link>
         </div>
 

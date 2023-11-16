@@ -1,8 +1,8 @@
 import {useState,useEffect} from 'react';
-import './gameL1.css';
+import './challenge.css';
 import SingleCard from '../components/SingleCard';
 import { updateLeaderboard } from '../leaderboardUtils';
-import LevelCompletePopup from '../Intermediate';
+import ChallengeCompletePopup from './challengeIntermediate';
 import '../Intermediate.css';
 import {useNavigate } from "react-router-dom";
 
@@ -11,9 +11,15 @@ const cardImages = [
     {"src": "img/google.png", matched: false},
     {"src": "img/html.png", matched: false},
     {"src": "img/js.png", matched: false},
+    {"src": "img/c++.png", matched: false},
+    {"src": "img/react.png", matched: false},
+    {"src": "img/aws.png", matched: false},
+    {"src": "img/win11.png", matched: false},
+    {"src": "img/vs.png", matched: false},
+    {"src": "img/python.png", matched: false},
 ]
 
-function StandardGameL1() {
+function ChallengeGame() {
     const [showPopup, setShowPopup] = useState(false);
     console.log('Rendering StandardGame component');
     const navigate = useNavigate();
@@ -65,9 +71,10 @@ function StandardGameL1() {
     }, [cards]);
 
     useEffect(() => {
-        if(finished){
-            console.log("Congratulations!!!!!")
-        }
+        if (finished) {
+            // Show the level completion popup
+            setShowPopup(true)
+          }
     },[finished])
 
     //shuffle
@@ -101,25 +108,10 @@ function StandardGameL1() {
     //Storing good marks to leaderboard
     useEffect(() => {
         if (finished) {
-        const level = 2;
-        updateLeaderboard(level, turns);
+          const level = 7;
+          updateLeaderboard(level, turns);
         }
     }, [finished, turns]);
-
-    useEffect(() => {
-        if (finished) {
-        // Show the level completion popup
-        setShowPopup(true);
-        }
-    }, [finished]);
-
-    const handleProceed = () => {
-        // Logic to proceed to the next level
-        shuffle()
-        navigate('/GameL2')
-        // Update the level, reset game state, etc.
-        setShowPopup(false) // Hide the popup
-    };
 
     const handleRestart = () => {
         // Logic to restart the current level...
@@ -140,7 +132,7 @@ function StandardGameL1() {
             <p>
                 <button onClick={shuffle}>New Game</button>
             </p>
-            <div className='card-gridL1'>
+            <div className='card-gridC'>
                 {cards.map(card => (
                     <SingleCard key={card.id} card={card} handleChoice={handleChoice} flipped={card===card1||card===card2||card.matched} disabled={disabled}/>
                 ))}
@@ -148,14 +140,14 @@ function StandardGameL1() {
             <p>Turns: {turns}</p>
 
             {showPopup && (
-                <LevelCompletePopup
-                onProceed={handleProceed}
+                <ChallengeCompletePopup
                 onRestart={handleRestart}
                 onHome={handleHome}
+                steps={turns}
                 />
             )}
         </div>
     )
 }
 
-export default StandardGameL1;
+export default ChallengeGame;

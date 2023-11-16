@@ -1,5 +1,5 @@
 import {useState,useEffect} from 'react';
-import './gameL1.css';
+import './gameL2.css';
 import SingleCard from '../components/SingleCard';
 import { updateLeaderboard } from '../leaderboardUtils';
 import LevelCompletePopup from '../Intermediate';
@@ -11,9 +11,10 @@ const cardImages = [
     {"src": "img/google.png", matched: false},
     {"src": "img/html.png", matched: false},
     {"src": "img/js.png", matched: false},
+    {"src": "img/c++.png", matched: false},
 ]
 
-function StandardGameL1() {
+function StandardGameL2() {
     const [showPopup, setShowPopup] = useState(false);
     console.log('Rendering StandardGame component');
     const navigate = useNavigate();
@@ -101,22 +102,22 @@ function StandardGameL1() {
     //Storing good marks to leaderboard
     useEffect(() => {
         if (finished) {
-        const level = 2;
-        updateLeaderboard(level, turns);
+          const level = 2;
+          updateLeaderboard(level, turns);
         }
     }, [finished, turns]);
 
     useEffect(() => {
         if (finished) {
-        // Show the level completion popup
-        setShowPopup(true);
+          // Show the level completion popup
+          setShowPopup(true);
         }
     }, [finished]);
 
     const handleProceed = () => {
         // Logic to proceed to the next level
         shuffle()
-        navigate('/GameL2')
+        navigate('/GameL3')
         // Update the level, reset game state, etc.
         setShowPopup(false) // Hide the popup
     };
@@ -140,7 +141,7 @@ function StandardGameL1() {
             <p>
                 <button onClick={shuffle}>New Game</button>
             </p>
-            <div className='card-gridL1'>
+            <div className='card-gridL2'>
                 {cards.map(card => (
                     <SingleCard key={card.id} card={card} handleChoice={handleChoice} flipped={card===card1||card===card2||card.matched} disabled={disabled}/>
                 ))}
@@ -158,4 +159,4 @@ function StandardGameL1() {
     )
 }
 
-export default StandardGameL1;
+export default StandardGameL2;
