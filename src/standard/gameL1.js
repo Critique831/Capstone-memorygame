@@ -7,10 +7,10 @@ import '../Intermediate.css';
 import {useNavigate } from "react-router-dom";
 
 const cardImages = [
-    {"src": "../public/img/css.png", matched: false},
-    {"src": "../public/img/google.png", matched: false},
-    {"src": "../public/img/html.png", matched: false},
-    {"src": "../public/img/js.png", matched: false},
+    {"src": "img/css.png", matched: false},
+    {"src": "img/google.png", matched: false},
+    {"src": "img/html.png", matched: false},
+    {"src": "img/js.png", matched: false},
 ]
 
 function StandardGameL1() {
