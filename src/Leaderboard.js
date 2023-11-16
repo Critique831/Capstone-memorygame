@@ -17,8 +17,8 @@ function Leaderboard() {
   }, []);
 
   return (
-    <div>
-      <h2>Leaderboard</h2>
+    <div className="table_container">
+      <h1>Leaderboard</h1>
       <table>
         <thead>
           <tr>

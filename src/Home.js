@@ -7,11 +7,9 @@ function Home() {
     <div className="App">
       <h1>Memory Game</h1>
       <div className="selection-menu">
-        <Link to="/GamePlay" ><button>New Game</button></Link>
-
-        <button>Level</button>
-
-        <button><Link to="/Leaderboard" >Leaderboard</Link></button>
+        <Link to="/GamePlay" ><button className='menu'>New Game</button></Link>
+        <Link to="/lvlsel" ><button className='menu'>Level</button></Link>
+        <button className='menu'><Link to="/Leaderboard" >Leaderboard</Link></button>
       </div>
     </div>
   );

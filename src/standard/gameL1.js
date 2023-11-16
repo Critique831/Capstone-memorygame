@@ -101,7 +101,7 @@ function StandardGameL1() {
     //Storing good marks to leaderboard
     useEffect(() => {
         if (finished) {
-        const level = 2;
+        const level = 1;
         updateLeaderboard(level, turns);
         }
     }, [finished, turns]);
@@ -136,9 +136,9 @@ function StandardGameL1() {
 
     return(
         <div className='App'>
-            <h1>Memory Game</h1>
+            <h1>Level 1</h1>
             <p>
-                <button onClick={shuffle}>New Game</button>
+                <button className='menu' onClick={shuffle}>New Game</button>
             </p>
             <div className='card-gridL1'>
                 {cards.map(card => (

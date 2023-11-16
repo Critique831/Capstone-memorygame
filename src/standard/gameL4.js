@@ -141,7 +141,7 @@ function StandardGameL4() {
         <div className='App'>
             <h1>Memory Game</h1>
             <p>
-                <button onClick={shuffle}>New Game</button>
+                <button className='menu' onClick={shuffle}>New Game</button>
             </p>
             <div className='card-gridL4'>
                 {cards.map(card => (

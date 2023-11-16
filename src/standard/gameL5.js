@@ -140,7 +140,7 @@ function StandardGameL5() {
         <div className='App'>
             <h1>Memory Game</h1>
             <p>
-                <button onClick={shuffle}>New Game</button>
+                <button className='menu' onClick={shuffle}>New Game</button>
             </p>
             <div className='card-gridL5'>
                 {cards.map(card => (
