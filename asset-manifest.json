@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/WeiChin124.github.io/Capstone-memorygame/static/css/main.0ed7f626.css",
+    "main.js": "/WeiChin124.github.io/Capstone-memorygame/static/js/main.334e6d04.js",
+    "static/js/787.9096bd4e.chunk.js": "/WeiChin124.github.io/Capstone-memorygame/static/js/787.9096bd4e.chunk.js",
+    "static/media/background1.png": "/WeiChin124.github.io/Capstone-memorygame/static/media/background1.e8897fdccd78dc5260b6.png",
+    "index.html": "/WeiChin124.github.io/Capstone-memorygame/index.html",
+    "main.0ed7f626.css.map": "/WeiChin124.github.io/Capstone-memorygame/static/css/main.0ed7f626.css.map",
+    "main.334e6d04.js.map": "/WeiChin124.github.io/Capstone-memorygame/static/js/main.334e6d04.js.map",
+    "787.9096bd4e.chunk.js.map": "/WeiChin124.github.io/Capstone-memorygame/static/js/787.9096bd4e.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.0ed7f626.css",
+    "static/js/main.334e6d04.js"
+  ]
+}
