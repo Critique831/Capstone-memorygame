@@ -4,7 +4,7 @@
 }
 .card img {
     margin-top: 10px;
-    width: 175px;
+    width: 155px;
     display: block;
     border: 2px solid #fff;
     border-radius: 6px;
@@ -18,7 +18,7 @@
 }
 
 .card .front {
-    width: 175px;
+    width: 155px;
     align-items: center;
     justify-content: center;
     transform: rotateY(90deg);

@@ -7,6 +7,10 @@
   .card-gridL5{
     margin-top: 40px;
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(8, 1fr);
     grid-gap: 20px;
+  }
+
+  .Turn{
+    color: white;
   }

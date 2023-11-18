@@ -9,7 +9,7 @@ body {
   text-align: center;
   background-image: url('../public/img/background1.png'); /* Replace with the path to your image file */
   color: #003bdd;
-  background-size:cover; /* Ensures that the background image covers the entire viewport */
+  background-size: cover; /* Ensures that the background image covers the entire viewport */
   background-position: center; /* Centers the background image */
   background-repeat: no-repeat ; /* Prevents the background image from repeating */
 }

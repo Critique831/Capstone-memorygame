@@ -138,16 +138,15 @@ function StandardGameL5() {
 
     return(
         <div className='App'>
-            <h1>Memory Game</h1>
-            <p>
-                <button className='menu' onClick={shuffle}>New Game</button>
-            </p>
+            <h1>Level 5</h1>
+            <button className='menu' onClick={shuffle}>Restart</button>
+            <p className='Turn'>Turns: {turns}</p>
             <div className='card-gridL5'>
                 {cards.map(card => (
                     <SingleCard key={card.id} card={card} handleChoice={handleChoice} flipped={card===card1||card===card2||card.matched} disabled={disabled}/>
                 ))}
             </div>
-            <p>Turns: {turns}</p>
+
 
             {showPopup && (
                 <LevelCompletePopup
